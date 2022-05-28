@@ -18,7 +18,7 @@ value = st.sidebar.selectbox("Model", options, format_func=lambda x: display[x])
 print(value)
 
 if value == 1:
-    tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
+    tflite_interpreter = tf.lite.Interpreter(model_path='efficientnet-lite0-fp32.tflite.tflite')
     tflite_interpreter.allocate_tensors()
 if value == 2:
     tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
