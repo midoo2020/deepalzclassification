@@ -18,7 +18,7 @@ value = st.sidebar.selectbox("Model", options, format_func=lambda x: display[x])
 print(value)
 
 if value == 1:
-    tflite_interpreter = tf.lite.Interpreter(model_path='efficientnet-lite0-fp32.tflite.tflite')
+    tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
     tflite_interpreter.allocate_tensors()
 if value == 2:
     tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
@@ -33,7 +33,7 @@ if value == 5:
     tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
     tflite_interpreter.allocate_tensors()
 if value == 6:
-    tflite_interpreter = tf.lite.Interpreter(model_path='models\created_model_dynamic.tflite')
+    tflite_interpreter = tf.lite.Interpreter(model_path='model.tflite')
     tflite_interpreter.allocate_tensors()
 
 def set_input_tensor(interpreter, image):
